@@ -1,118 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Ateísmo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ff0000; /* Vermelho */
-            color: gold; /* Dourado */
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-        #configuracoes {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        #configuracoes button {
-            background-color: blue; /* Azul */
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        #configuracoes button:hover {
-            background-color: darkblue;
-        }
-        nav {
-            background-color: #666;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        #bandeiras {
-            text-align: center;
-        }
-        #cruz {
-            font-size: 50px;
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Simples</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .calculator {
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+    .calculator input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+    .calculator input[type="button"] {
+        width: 48%;
+        padding: 5px;
+        margin: 2px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <div id="cruz">&#9746;</div> <!-- Cruz sobre o texto -->
-        <h1>Site de Ateísmo</h1>
-        <div id="configuracoes">
-            <button>Configurações</button>
-        </div>
-    </header>
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#crenças">Crenças</a>
-        <a href="#debates">Debates</a>
-        <a href="#contato">Contato</a>
-    </nav>
-    <main>
-        <section id="sobre">
-            <h2>Sobre o Ateísmo / 关于无神论</h2>
-            <p>O ateísmo é a falta de crença na existência de divindades. Os ateus rejeitam as reivindicações teístas e consideram que não há evidências suficientes para apoiar a existência de qualquer deus ou deuses.</p>
-            <p>无神论是对神的存在的缺乏信念。无神论者拒绝神论者的主张，并认为没有足够的证据支持任何神的存在。</p>
-        </section>
-        <section id="crenças">
-            <h2>Crenças Ateístas / 无神论信仰</h2>
-            <p>Os ateus geralmente baseiam suas crenças na razão, na ciência e na evidência empírica. Eles tendem a rejeitar a religião organizada e a fé baseada em dogmas.</p>
-            <p>无神论者通常将他们的信仰建立在理性、科学和经验主义的基础上。他们倾向于拒绝有组织的宗教和以教条为基础的信仰。</p>
-        </section>
-        <section id="debates">
-            <h2>Debates sobre Ateísmo / 无神论辩论</h2>
-            <p>O ateísmo é frequentemente debatido em contextos filosóficos, científicos e religiosos. Muitos argumentam a favor ou contra a existência de Deus e exploram as implicações morais e éticas do ateísmo.</p>
-            <p>无神论经常在哲学、科学和宗教背景下进行辩论。许多人为或反对上帝的存在进行辩论，并探讨了无神论的道德和伦理含义。</p>
-        </section>
-        <section id="contato">
-            <h2>Contato / 联系我们</h2>
-            <p>Para mais informações sobre ateísmo, entre em contato conosco através do e-mail: contato@ateismo.com</p>
-            <p>欲了解更多关于无神论的信息，请通过电子邮件联系我们：contato@ateismo.com</p>
-        </section>
-    </main>
-    <footer>
-        <div id="bandeiras">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1920px-Flag_of_the_People%27s_Republic_of_China.svg.png" alt="Bandeira da China" width="50" height="30">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="Bandeira dos Estados Unidos" width="50" height="30">
-        </div>
-        <p>&copy; 2024 Site de Ateísmo. Todos os direitos reservados.</p>
-    </footer>
+
+<div class="calculator">
+    <input type="text" id="display" readonly>
+    <input type="button" value="1" onclick="addToDisplay('1')">
+    <input type="button" value="2" onclick="addToDisplay('2')">
+    <input type="button" value="3" onclick="addToDisplay('3')">
+    <input type="button" value="+" onclick="addToDisplay('+')">
+    <input type="button" value="4" onclick="addToDisplay('4')">
+    <input type="button" value="5" onclick="addToDisplay('5')">
+    <input type="button" value="6" onclick="addToDisplay('6')">
+    <input type="button" value="-" onclick="addToDisplay('-')">
+    <input type="button" value="7" onclick="addToDisplay('7')">
+    <input type="button" value="8" onclick="addToDisplay('8')">
+    <input type="button" value="9" onclick="addToDisplay('9')">
+    <input type="button" value="*" onclick="addToDisplay('*')">
+    <input type="button" value="C" onclick="clearDisplay()">
+    <input type="button" value="0" onclick="addToDisplay('0')">
+    <input type="button" value="=" onclick="calculate()">
+    <input type="button" value="/" onclick="addToDisplay('/')">
+</div>
+
+<script>
+    function addToDisplay(value) {
+        document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
+
+    function calculate() {
+        try {
+            document.getElementById('display').value = eval(document.getElementById('display').value);
+        } catch (error) {
+            document.getElementById('display').value = 'Error';
+        }
+    }
+</script>
+
 </body>
 </html>
